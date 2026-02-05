@@ -1,70 +1,79 @@
-# 8086-Temperature-Control-System
+# 8086 Microprocessor: Smart Temperature Control System
 
-In this project, It can be controlled the temperature on any room-place using with emulator 8086. (using Assembly Language and Proteus)
-. In ***[23-32]*** degrees are the control fan motor doesn't working.
-It works ***outside[23,32]*** degrees. Because it is not necesarry, it is good for room temperature from 23 to 32 degrees.
+This project implements an automated temperature regulation system using the **8086 Microprocessor**. The system is designed to maintain room temperature within an optimal range (23°C to 32°C) by controlling a cooling fan through hardware-software integration.
 
-There are few instructions below, they represented project working scheme and screen shots.
+---
 
+## 🛠 Tech Stack
 
+* **Language:** Assembly 8086 (Low-level programming).
+* **Hardware Simulation:** Proteus 8.17.
+* **Microprocessor Architecture:** Intel 8086, 8255 PPI, ADC0804, LM35 Sensor.
 
- *Program files and project created with **Proteus software and emu8086**. They should be installed for execute the files.*
+---
 
+## 📂 Project Structure
 
+Following a professional organization, the repository is structured as follows:
+
+| Directory | Description |
+| :--- | :--- |
+| `src/` | Contains the primary assembly source code (`final_temperature_fan.asm`). |
+| `simulation/` | Contains the Proteus design file and compiled firmware. |
+| `docs/` | Detailed project report (PDF) and system architecture diagrams. |
+
+---
+
+## ⚙️ System Logic
+
+* **Normal Range (23°C - 32°C):** The system remains idle to save energy.
+* **Active Range (Outside [23, 32]):** The 8086 triggers the 8255 PPI to activate the fan motor immediately.
+* **Hardware Interfacing:** Uses **ADC0804** for Analog-to-Digital conversion of LM35 sensor data and **8255 PPI** for peripheral control.
+
+---
+
+## 📸 Screenshots
+
+### System Overview
+![System Overview](docs/All_circuit.png)
+*Figure 1: Complete circuit simulation in Proteus*
+
+### Integration Details
+| Components Detail | Fan Actuator |
+| :---: | :---: |
+| ![Components Detail](docs/LM35+ADC+8255+8086.png) | ![Fan Actuator](docs/fan.png) |
+| *Figure 2: LM35, ADC0804, and 8255 PPI* | *Figure 3: Output control for the fan* |
+
+---
+
+## 🚀 How to Run:
 *Note: I have prepared  **explanation video** to understanding easly of my project
-https://disk.yandex.com.tr/i/x6q5UAOW2R7MMQ*
+https://disk.yandex.com.tr/i/x6q5UAOW2R7MMQ*  
 
-
-
-
-## Screenshots
-
-![Alt Text](https://www.linkpicture.com/q/temperature.jpg)
-
-
-
-
-![Alt Text](https://www.linkpicture.com/q/4_343.jpg)
-
-
-
-![Alt Text](https://www.linkpicture.com/q/3_382.jpg)
-
-
-![Alt Text](https://www.linkpicture.com/q/temp2.jpg)
-
-
-
-
-## Using & Run 
-
-
-
-Clone the project
-
+### 1. Clone the project
 ```bash
-  git clone https://github.com/egemengulpinar/emu8086-Temperature-Control.git
+git clone [https://github.com/ThinhBanTo/8086-Temperature-Control-System.git](https://github.com/ThinhBanTo/8086-Temperature-Control-System.git)
 ```
+### 2. Compile Source
+1. Open the file `src/final_temperature_fan.asm` using **emu8086**.
+2. Click the **Compile** button to assemble the source code.
+3. Save the generated firmware file in `.com` or `.bin` format.
 
-*Follow the ***explanation video***, then select same option and setting to execute project.*
+### 3. Run Simulation
+1. Open `simulation/FINAL temperature control project.pdsprj` in **Proteus 8.17**.
+2. Right-click on the **8086 CPU** component in the schematic and select **"Edit Component"**.
+3. In the **"Program File"** field, click the folder icon and browse to the `.com` or `.bin` file you compiled in the previous step.
+4. Click **OK** to confirm.
+5. Press the **Start (Play)** button at the bottom-left corner to run the simulation.
 
+---
 
-- Open emu8086 and import temperature.asm file. Save assembly file on emu8086 with ***.com*** file format.
+## 📄 Documentation
 
-- Open `Proteus Software` and import `17-155-014 temperature control project.pdsprj` project file.
+For a deep dive into the register-level logic and hardware pin connections, please refer to our full report:
 
+👉 [**Read Project Report (PDF)**](docs/BTL_KTMT.pdf)
 
+---
 
-- Click 8086 program and select `"Edit Component"` settings on the Proteus software, open previous ***.com*** file and click ***OK***
-
-- Then click ***start*** button on project diagram in Proteus Software
-
-- You can change the temperature with  `CONTROL-TEMPERATURE` part.
-
-When the program was executed (if  temperature > 33&deg;  or temperature < 23&deg;), the control fan motor will working succesfully.
-
-
-
-
-
-
+**Author:** Nguyen Khac Thinh - IT Student (Talent Program) at PTIT.
