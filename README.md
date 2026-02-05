@@ -14,9 +14,6 @@ There are few instructions below, they represented project working scheme and sc
 *Note: I have prepared  **explanation video** to understanding easly of my project
 https://disk.yandex.com.tr/i/x6q5UAOW2R7MMQ*
 
-*Note: I have prepared  **paper** with my teammate, you can reach it with below the link
-https://drive.google.com/file/d/11QLuVCG1ewLyfp19VEWnpBzKTZ1a-hVj/view?usp=sharing*
-
 
 
 
