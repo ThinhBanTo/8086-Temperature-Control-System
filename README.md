@@ -52,7 +52,7 @@ https://disk.yandex.com.tr/i/x6q5UAOW2R7MMQ*
 
 ### 1. Clone the project
 ```bash
-git clone [https://github.com/ThinhBanTo/8086-Temperature-Control-System.git](https://github.com/ThinhBanTo/8086-Temperature-Control-System.git)
+git clone [https://github.com/ThinhBanTo/8086-Temperature-Control-System.git]
 ```
 ### 2. Compile Source
 1. Open the file `src/final_temperature_fan.asm` using **emu8086**.
